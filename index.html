@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Right to Second Life Ontario</title>
+<meta name="description" content="1,776 Ontarians are waiting for an organ transplant. Right to Second Life Ontario calls for opt-out organ and tissue donation for everyone 16 and older, with no family veto.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Your decision should be final. | Right to Second Life Ontario">
+<meta property="og:description" content="1,776 Ontarians are waiting for an organ transplant. Right to Second Life Ontario calls for opt-out organ and tissue donation for everyone 16 and older, with no family veto.">
+<meta property="og:image" content="https://trangphan0301.github.io/right-to-second-life-ontario/media/poster.jpg">
+<meta property="og:url" content="https://trangphan0301.github.io/right-to-second-life-ontario/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F2F5F0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%231F7A5A'/%3E%3Cpath fill='%23fff' d='M12 19s-6-3.8-6-8.6A3.5 3.5 0 0 1 12 8.2a3.5 3.5 0 0 1 6 2.2C18 15.2 12 19 12 19z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&display=swap">
+<style>
+/* Layout: a petition desk. The hero pairs the thesis with a donor-decision card and the paper-signature tally;
+   sections run on paper, with one navy screening band for the film. */
+:root {
+  --paper: #F2F5F0;
+  --surface: #FFFFFF;
+  --ink: #0F2236;
+  --muted: #4A5A61;
+  --line: #D2DBD4;
+  --green: #1F7A5A;
+  --green-ink: #135A41;
+  --green-soft: #DCEBE3;
+  --on-green: #FFFFFF;
+  --amber: #DE9628;
+  --amber-soft: #F7E5C4;
+  --amber-ink: #73480A;
+  --band: #0F2236;
+  --band-ink: #E7EEEA;
+  --band-muted: #A8B7B2;
+  --band-line: #263B50;
+  --card: #1D7354;
+  --card-2: #12513B;
+  --card-ink: #F1F8F4;
+  --seal-ink: #0F2236;
+  --sheet: #FFFFFF;
+  --sheet-ink: #15191C;
+  --sheet-line: #A3ACA8;
+  --video-bg: #050B10;
+  --shadow: rgba(15, 34, 54, 0.28);
+  --focus: #DE9628;
+
+  --display: "Archivo", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --ui: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0D1922; --surface: #13232E; --ink: #E5ECE8; --muted: #9EAEA9; --line: #24384A;
+    --green: #3DB485; --green-ink: #74D3AA; --green-soft: #173A2F; --on-green: #04221A;
+    --amber: #EDB04C; --amber-soft: #3A2D15; --amber-ink: #F4CB7E;
+    --band: #07121A; --band-ink: #E5ECE8; --band-muted: #93A5A0; --band-line: #1D3142;
+    --card: #1D7354; --card-2: #0F4733; --card-ink: #F1F8F4; --seal-ink: #0F2236;
+    --sheet: #E9EDE8; --sheet-ink: #121619; --sheet-line: #8E9894;
+    --video-bg: #000000; --shadow: rgba(0, 0, 0, 0.55); --focus: #EDB04C;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0D1922; --surface: #13232E; --ink: #E5ECE8; --muted: #9EAEA9; --line: #24384A;
+  --green: #3DB485; --green-ink: #74D3AA; --green-soft: #173A2F; --on-green: #04221A;
+  --amber: #EDB04C; --amber-soft: #3A2D15; --amber-ink: #F4CB7E;
+  --band: #07121A; --band-ink: #E5ECE8; --band-muted: #93A5A0; --band-line: #1D3142;
+  --card: #1D7354; --card-2: #0F4733; --card-ink: #F1F8F4; --seal-ink: #0F2236;
+  --sheet: #E9EDE8; --sheet-ink: #121619; --sheet-line: #8E9894;
+  --video-bg: #000000; --shadow: rgba(0, 0, 0, 0.55); --focus: #EDB04C;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+/* base reset */
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper); color: var(--ink);
+  font-family: var(--body); font-size: 1.0625rem; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 10; background: var(--paper);
+}
+a { color: var(--green-ink); text-underline-offset: 0.18em; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+[id] { scroll-margin-top: 7rem; }
+p { margin: 0; }
+
+.wrap {
+  max-width: 72rem; margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+/* type scale */
+.eyebrow {
+  font-family: var(--data); font-size: 0.78rem; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-ink); margin: 0;
+}
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+h2 {
+  font-family: var(--display); font-stretch: 78%; font-weight: 800;
+  font-size: clamp(2.1rem, 3.4vw + 1rem, 3.5rem); line-height: 1.0; letter-spacing: -0.005em;
+}
+h3 { font-family: var(--ui); font-weight: 700; font-size: 1.15rem; line-height: 1.25; }
+.lede { font-size: 1.18rem; line-height: 1.55; max-width: 40rem; }
+.fine { font-family: var(--ui); font-size: 0.86rem; line-height: 1.45; color: var(--muted); }
+.source { font-family: var(--data); font-size: 0.72rem; letter-spacing: 0.02em; color: var(--muted); }
+
+/* header */
+.site-head {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 9;
+  background: var(--paper); border-bottom: 1px solid var(--line);
+}
+.head-inner { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 2rem; padding-block: 0.8rem; }
+.brand {
+  display: flex; align-items: baseline; gap: 0.55rem; text-decoration: none; color: var(--ink);
+  font-family: var(--display); font-stretch: 80%; font-weight: 800; font-size: 1.2rem; line-height: 1;
+}
+.brand small { font-family: var(--data); font-weight: 500; font-size: 0.68rem; letter-spacing: 0.16em; color: var(--green-ink); }
+.nav { display: flex; gap: 1.35rem; margin-left: auto; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a {
+  font-family: var(--ui); font-weight: 600; font-size: 0.93rem; white-space: nowrap;
+  color: var(--muted); text-decoration: none; padding-block: 0.3rem; border-bottom: 2px solid transparent;
+}
+.nav a:hover { color: var(--ink); border-bottom-color: var(--green); }
+@media (max-width: 760px) { .nav { margin-left: 0; width: 100%; gap: 1.1rem; } }
+
+/* buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  font-family: var(--ui); font-weight: 650; font-size: 1rem; line-height: 1.2;
+  padding: 0.85rem 1.2rem; border-radius: 10px; border: 1.5px solid var(--ink);
+  color: var(--ink); background: transparent; text-decoration: none; cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+.btn svg { width: 1.1em; height: 1.1em; flex: none; }
+.btn:hover { background: var(--green-soft); }
+.btn:active { transform: translateY(1px); }
+.btn.primary { background: var(--green); border-color: var(--green); color: var(--on-green); }
+.btn.primary:hover { background: var(--green-ink); border-color: var(--green-ink); }
+.linkish {
+  font: inherit; font-family: var(--ui); font-weight: 600; color: var(--green-ink);
+  background: none; border: 0; padding: 0; text-decoration: underline; text-underline-offset: 0.18em; cursor: pointer;
+}
+
+/* hero */
+.hero { overflow-x: clip; }
+.hero .wrap { padding-block: clamp(2.5rem, 6vw, 5rem) clamp(3rem, 6vw, 5rem); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(2.5rem, 5vw, 4.5rem); align-items: center; }
+@media (max-width: 860px) { .hero-grid { grid-template-columns: minmax(0, 1fr); } .card-stage { padding-top: 0; } }
+.hero-copy { display: grid; gap: 1.4rem; min-width: 0; }
+h1 {
+  font-family: var(--display); font-stretch: 70%; font-weight: 850;
+  font-size: clamp(3.3rem, 7vw + 1rem, 7.2rem); line-height: 0.9; letter-spacing: -0.012em;
+}
+h1 em { font-style: normal; color: var(--green); }
+.hero .lede { font-size: clamp(1.12rem, 0.5vw + 1rem, 1.3rem); max-width: 34rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 0.4rem; }
+
+.tally { margin-top: 0.8rem; max-width: 34rem; display: grid; gap: 0.55rem; }
+.tally-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.25rem 1rem; }
+.tally-label { font-family: var(--ui); font-weight: 650; font-size: 0.98rem; }
+.tally-count { font-family: var(--data); font-variant-numeric: tabular-nums; font-size: 0.95rem; color: var(--muted); }
+.tally-count strong { font-weight: 500; font-size: 1.55rem; color: var(--ink); }
+.track { position: relative; height: 16px; border-radius: 3px; background: var(--green-soft); overflow: hidden; }
+.track::after {
+  content: ""; position: absolute; inset: 0;
+  background: repeating-linear-gradient(to right, transparent 0 calc(10% - 1px), var(--line) calc(10% - 1px) 10%);
+  mix-blend-mode: multiply; opacity: 0.9;
+}
+.track .fill { position: absolute; inset: 0 auto 0 0; width: 5%; background: var(--green); z-index: 1; }
+.ticks { position: relative; height: 1rem; font-family: var(--data); font-size: 0.7rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.ticks span { position: absolute; top: 0; transform: translateX(-50%); }
+.ticks span:first-child { transform: none; }
+.ticks span:last-child { transform: translateX(-100%); }
+@media (max-width: 480px) { .ticks .mid { display: none; } }
+
+/* donor decision card */
+.card-stage { display: grid; justify-items: center; gap: 1.6rem; padding: 1rem 1.2rem 0.5rem; min-width: 0; }
+.donor-card {
+  position: relative; width: min(100%, 23rem); max-width: 100%; aspect-ratio: 1.586;
+  border-radius: 18px; padding: 1.2rem 1.35rem; color: var(--card-ink);
+  background:
+    radial-gradient(120% 90% at 100% 0%, rgba(255, 255, 255, 0.14), transparent 55%),
+    linear-gradient(155deg, var(--card), var(--card-2));
+  box-shadow: 0 28px 50px -26px var(--shadow), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  transform: rotate(-4deg);
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.card-top { display: flex; justify-content: space-between; align-items: center; }
+.card-top span { font-family: var(--data); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; }
+.card-top svg { width: 1.6rem; height: 1.6rem; }
+.card-mid { display: grid; gap: 0.1rem; }
+.card-mid .what { font-family: var(--ui); font-size: 0.9rem; font-weight: 600; opacity: 0.88; }
+.card-mid .yes { font-family: var(--display); font-stretch: 68%; font-weight: 900; font-size: clamp(3rem, 9vw, 4.1rem); line-height: 0.9; }
+.card-meta { display: flex; gap: 1.6rem; margin: 0; font-family: var(--ui); }
+.card-meta div { display: grid; }
+.card-meta dt { font-family: var(--data); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.75; }
+.card-meta dd { margin: 0; font-weight: 700; font-size: 1rem; }
+.seal {
+  position: absolute; right: 0.9rem; bottom: -1.3rem;
+  display: grid; justify-items: center; gap: 0.1rem;
+  padding: 0.5rem 0.9rem 0.55rem; border-radius: 8px;
+  background: var(--amber); color: var(--seal-ink);
+  box-shadow: 0 10px 22px -10px var(--shadow), inset 0 0 0 2px rgba(15, 34, 54, 0.22);
+  transform: rotate(9deg);
+  animation: press 0.7s cubic-bezier(0.2, 0.9, 0.3, 1.2) 0.5s both;
+}
+.seal b { font-family: var(--display); font-stretch: 70%; font-weight: 900; font-size: 1.9rem; line-height: 0.9; letter-spacing: 0.04em; text-transform: uppercase; }
+.seal span { font-family: var(--data); font-size: 0.62rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; }
+@keyframes press {
+  from { transform: rotate(9deg) scale(1.4); opacity: 0.35; }
+  65% { transform: rotate(9deg) scale(0.95); opacity: 1; }
+  to { transform: rotate(9deg) scale(1); opacity: 1; }
+}
+.card-note { font-family: var(--data); font-size: 0.7rem; color: var(--muted); letter-spacing: 0.04em; text-align: center; }
+
+/* generic sections */
+.section .wrap { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
+.alt { background: var(--surface); }
+#issue .wrap { border-top: 1px solid var(--line); }
+.sec-head { display: grid; gap: 0.9rem; max-width: 48rem; margin-bottom: clamp(2rem, 4vw, 3rem); }
+
+/* issue */
+.issue-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2.5rem, 5vw, 4.5rem); align-items: start; }
+.lead-fig { display: grid; gap: 0.75rem; min-width: 0; }
+.lead-fig .num {
+  font-family: var(--display); font-stretch: 66%; font-weight: 900; line-height: 0.82;
+  font-size: clamp(5.5rem, 13vw, 10.5rem); font-variant-numeric: tabular-nums; letter-spacing: -0.02em;
+}
+.lead-fig .what { font-family: var(--ui); font-weight: 650; font-size: 1.25rem; line-height: 1.3; }
+.lead-fig .when { font-family: var(--data); font-size: 0.8rem; color: var(--muted); }
+.lead-fig .death {
+  font-family: var(--ui); font-weight: 700; font-size: 1.08rem; line-height: 1.35;
+  color: var(--amber-ink); background: var(--amber-soft); padding: 0.6rem 0.8rem; border-radius: 6px; justify-self: start;
+}
+.lead-fig .context { margin-top: 0.75rem; color: var(--muted); max-width: 30rem; }
+.charts { display: grid; gap: 2.6rem; min-width: 0; }
+.chart { margin: 0; display: grid; gap: 0.85rem; }
+.chart figcaption { display: grid; gap: 0.15rem; }
+.chart figcaption b { font-family: var(--ui); font-weight: 700; font-size: 1.05rem; }
+.bar-row {
+  display: grid; grid-template-columns: 11.5rem minmax(0, 1fr) 6.6rem; align-items: center;
+  gap: 0.35rem 1rem; font-family: var(--ui); font-size: 0.95rem;
+}
+.bar-track { position: relative; height: 24px; border-radius: 3px; background: var(--green-soft); }
+.bar { position: absolute; inset: 0 auto 0 0; width: var(--v); border-radius: 3px; background: var(--green); }
+.bar.low { background: var(--amber); }
+.bar-val { font-family: var(--data); font-variant-numeric: tabular-nums; font-size: 0.86rem; }
+.axis { position: relative; height: 1rem; font-family: var(--data); font-size: 0.68rem; color: var(--muted); }
+.axis span { position: absolute; top: 0; transform: translateX(-50%); white-space: nowrap; }
+.axis span:first-child { transform: none; }
+.axis span:last-child { transform: translateX(-100%); }
+@media (max-width: 560px) {
+  .bar-row { grid-template-columns: minmax(0, 1fr) 6.2rem; }
+  .bar-label { grid-column: 1 / -1; }
+  .bar-row .spacer { display: none; }
+}
+.families { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0.5rem 1.4rem; align-items: center; }
+.people { display: flex; gap: 0.35rem; color: var(--green); }
+.people svg { width: 1.7rem; height: 2.3rem; }
+.people svg.no { color: var(--amber); }
+.families .big { font-family: var(--display); font-stretch: 72%; font-weight: 850; font-size: 2.2rem; line-height: 1; }
+.families p { grid-column: 1 / -1; max-width: 34rem; }
+@media (max-width: 860px) { .issue-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) { .families .big { font-size: 1.8rem; } }
+
+/* ask */
+.asks { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: clamp(1.5rem, 3vw, 2.5rem); }
+.asks li { display: grid; align-content: start; gap: 0.5rem; padding-block: 1.4rem 1.6rem; border-top: 1px solid var(--line); min-width: 0; }
+.asks li.core { border-top: 3px solid var(--green); }
+.asks .tag { font-family: var(--data); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-ink); }
+.asks p { color: var(--muted); font-size: 1rem; }
+@media (max-width: 900px) { .asks { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .asks { grid-template-columns: minmax(0, 1fr); } }
+.assurance {
+  margin-top: 2.2rem; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1rem; align-items: start;
+  max-width: 46rem; font-size: 1.12rem;
+}
+.assurance svg { width: 1.6rem; height: 1.6rem; color: var(--green); margin-top: 0.15rem; }
+
+/* film band */
+.band { background: var(--band); color: var(--band-ink); }
+.band .wrap { padding-block: clamp(3.5rem, 8vw, 6rem); }
+.band .eyebrow { color: var(--green); }
+.film { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: clamp(2rem, 4vw, 3rem); align-items: start; }
+.film-media { display: grid; gap: 0.7rem; min-width: 0; }
+video { display: block; width: 100%; max-width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; background: var(--video-bg); }
+.film-label { font-family: var(--data); font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--band-muted); }
+.film-copy { display: grid; gap: 1.1rem; min-width: 0; }
+.film-copy .meta { font-family: var(--data); font-size: 0.78rem; color: var(--band-muted); }
+.film-copy p { color: var(--band-ink); }
+details.transcript { border-top: 1px solid var(--band-line); padding-top: 1rem; }
+details.transcript summary { font-family: var(--ui); font-weight: 650; cursor: pointer; color: var(--band-ink); }
+details.transcript ol { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: 0.75rem; font-size: 0.95rem; }
+details.transcript li b { display: block; font-family: var(--data); font-weight: 500; font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); }
+@media (max-width: 900px) { .film { grid-template-columns: minmax(0, 1fr); } }
+
+/* petition */
+.pet-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(2.5rem, 5vw, 4.5rem); align-items: start; }
+.steps { list-style: none; counter-reset: step; margin: 0; padding: 0; display: grid; gap: 1.8rem; }
+.steps li { counter-increment: step; display: grid; grid-template-columns: 2.6rem minmax(0, 1fr); gap: 0.4rem 1rem; }
+.steps li::before {
+  content: counter(step); grid-row: span 2;
+  font-family: var(--display); font-stretch: 72%; font-weight: 850; font-size: 2.3rem; line-height: 0.9; color: var(--green);
+}
+.steps p { color: var(--muted); }
+.print-block { display: grid; gap: 1.1rem; min-width: 0; }
+.sheet {
+  background: var(--sheet); color: var(--sheet-ink); border-radius: 3px;
+  padding: clamp(1.1rem, 3vw, 1.9rem); font-family: var(--ui); font-size: 0.82rem; line-height: 1.45;
+  box-shadow: 0 1px 0 var(--line), 0 22px 40px -28px var(--shadow);
+  transform: rotate(0.6deg); display: grid; gap: 0.5rem;
+}
+.sheet .s-title { font-weight: 800; font-size: 1.05rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.sheet .s-to { font-weight: 700; }
+.sheet .s-w b { letter-spacing: 0.04em; }
+.sheet .s-prayer { border: 1.5px solid var(--sheet-ink); padding: 0.6rem 0.75rem; margin-block: 0.3rem; font-size: 0.86rem; }
+.sheet .s-rows { display: grid; grid-template-columns: 1.4rem minmax(0, 3fr) minmax(0, 4fr) minmax(0, 3fr); font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.sheet .s-rows span { padding: 0.25rem 0.3rem; border-bottom: 1px solid var(--sheet-line); min-height: 1.9rem; display: flex; align-items: end; }
+.sheet .s-rows .h { font-weight: 700; border-bottom: 1.5px solid var(--sheet-ink); min-height: 0; }
+.sheet .s-rows .n { color: var(--sheet-line); }
+.print-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; align-items: center; }
+.status { font-family: var(--ui); font-size: 0.9rem; color: var(--green-ink); min-height: 1.4em; }
+@media (max-width: 900px) { .pet-grid { grid-template-columns: minmax(0, 1fr); } }
+
+.act-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 4vw, 3.5rem); margin-top: clamp(3rem, 6vw, 4.5rem); align-items: start; }
+@media (max-width: 900px) { .act-grid { grid-template-columns: minmax(0, 1fr); } }
+.pledge {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+  padding: clamp(1.25rem, 3vw, 1.9rem); display: grid; gap: 1rem; min-width: 0;
+}
+.pledge form { display: grid; gap: 0.85rem; }
+.check { display: grid; grid-template-columns: 1.3rem minmax(0, 1fr); gap: 0.7rem; align-items: start; font-family: var(--ui); font-size: 0.98rem; line-height: 1.4; cursor: pointer; }
+.check input { width: 1.15rem; height: 1.15rem; margin: 0.1rem 0 0; accent-color: var(--green); }
+.pledge .btn { justify-self: start; }
+.error { font-family: var(--ui); font-size: 0.9rem; font-weight: 600; color: var(--amber-ink); }
+.done { display: grid; gap: 0.8rem; background: var(--green-soft); border-radius: 10px; padding: 1rem 1.1rem; font-family: var(--ui); }
+.done .row { display: flex; flex-wrap: wrap; gap: 0.6rem 1.4rem; }
+
+.locations { display: grid; gap: 1.1rem; min-width: 0; }
+.hubs { list-style: none; margin: 0; padding: 0; display: grid; }
+.hubs li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.2rem 1rem; padding-block: 1rem; border-top: 1px solid var(--line); }
+.hubs li:last-child { border-bottom: 1px solid var(--line); }
+.hub-region { font-family: var(--ui); font-weight: 700; font-size: 1.05rem; }
+.hub-cities { grid-column: 1; font-family: var(--ui); color: var(--muted); font-size: 0.95rem; }
+.hubs p { grid-column: 1 / -1; font-size: 0.95rem; color: var(--muted); }
+.chip {
+  grid-column: 2; grid-row: 1 / span 2; align-self: start;
+  font-family: var(--data); font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 0.3rem 0.55rem; border-radius: 5px; background: var(--green-soft); color: var(--green-ink); white-space: nowrap;
+}
+.chip.priority { background: var(--amber-soft); color: var(--amber-ink); }
+
+/* newsroom */
+.news-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 4fr) minmax(0, 3fr); gap: clamp(2rem, 4vw, 3.5rem); align-items: start; }
+@media (max-width: 960px) { .news-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .contact { grid-column: 1 / -1; } }
+@media (max-width: 620px) { .news-grid { grid-template-columns: minmax(0, 1fr); } }
+.news-col { display: grid; gap: 1rem; min-width: 0; }
+.kit, .people-list { list-style: none; margin: 0; padding: 0; display: grid; }
+.kit li, .people-list li { display: grid; gap: 0.1rem; padding-block: 0.8rem; border-top: 1px solid var(--line); }
+.kit b, .people-list b { font-family: var(--ui); font-weight: 700; }
+.kit span, .people-list span { font-family: var(--ui); font-size: 0.93rem; color: var(--muted); }
+.contact { background: var(--band); color: var(--band-ink); border-radius: 14px; padding: 1.4rem 1.5rem; display: grid; gap: 0.6rem; }
+.contact .eyebrow { color: var(--green); }
+.contact b { font-family: var(--display); font-stretch: 78%; font-weight: 800; font-size: 1.7rem; line-height: 1; }
+.contact p { font-family: var(--ui); font-size: 0.95rem; color: var(--band-muted); }
+
+/* footer */
+.foot .wrap { padding-block: 2.6rem 3rem; border-top: 1px solid var(--line); display: grid; gap: 1.4rem; }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 2rem; }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+.foot .disclaimer { font-family: var(--ui); font-weight: 600; font-size: 0.98rem; line-height: 1.5; max-width: 38rem; }
+.foot ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.45rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .seal { animation: none; }
+  .btn { transition: none; }
+}
+</style>
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="#top">Right to Second Life <small>ONTARIO</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#issue">The Issue</a>
+      <a href="#ask">Our Ask</a>
+      <a href="#stories">Stories</a>
+      <a href="#petition">Petition</a>
+      <a href="#newsroom">Newsroom</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">A petition to the Legislative Assembly of Ontario</p>
+        <h1>Your decision should be <em>final.</em></h1>
+        <p class="lede">1,776 Ontarians are waiting for an organ transplant. We’re calling on Ontario to adopt opt-out organ and tissue donation for everyone 16 and older, with no family veto.</p>
+        <div class="actions">
+          <a class="btn primary" href="media/petition.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><rect x="3" y="9" width="18" height="8" rx="2" fill="none"/><path d="M6 14h12v7H6z" fill="none"/></svg>
+            Download &amp; print the petition
+          </a>
+          <a class="btn" href="#pledge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="none"/></svg>
+            Pledge your support
+          </a>
+          <a class="btn" href="#locations">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-6.2-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 14.8 12 21 12 21z" fill="none"/><circle cx="12" cy="9.8" r="2.3" fill="none"/></svg>
+            Find a signing location
+          </a>
+        </div>
+
+        <div class="tally" id="tally" data-collected="500" data-goal="10000">
+          <div class="tally-head">
+            <span class="tally-label">Paper signatures collected</span>
+            <span class="tally-count"><strong id="tally-num">500</strong> of <span id="tally-goal">10,000</span></span>
+          </div>
+          <div class="track" id="tally-track" role="progressbar" aria-label="Paper signatures collected: 500 of 10,000" aria-valuemin="0" aria-valuemax="10000" aria-valuenow="500"><span class="fill" id="tally-fill"></span></div>
+          <div class="ticks" aria-hidden="true">
+            <span style="left:0">0</span><span class="mid" style="left:25%">2,500</span><span style="left:50%">5,000</span><span class="mid" style="left:75%">7,500</span><span style="left:100%">10,000</span>
+          </div>
+          <p class="fine">Each mark is 1,000 signatures. Ontario accepts paper petitions only, so online pledges are not counted as signatures.</p>
+        </div>
+      </div>
+
+      <div class="card-stage">
+        <div class="donor-card" role="img" aria-label="Illustrated donor decision card: organ and tissue donation, yes, decided at 16, stamped final, no family veto">
+          <div class="card-top">
+            <span>My decision</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 21s-8-5-8-11.2A4.6 4.6 0 0 1 12 6.9a4.6 4.6 0 0 1 8 2.9C20 16 12 21 12 21z"/></svg>
+          </div>
+          <div class="card-mid">
+            <span class="what">Organ and tissue donation</span>
+            <span class="yes">Yes</span>
+          </div>
+          <dl class="card-meta">
+            <div><dt>Decided at</dt><dd>16</dd></div>
+            <div><dt>Status</dt><dd>Registered</dd></div>
+          </dl>
+          <div class="seal"><b>Final</b><span>No family veto</span></div>
+        </div>
+        <p class="card-note">Campaign illustration. Not an official document.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="issue">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">The Issue</p>
+        <h2>Ontarians say yes. The system doesn’t always listen.</h2>
+      </div>
+      <div class="issue-grid">
+        <div class="lead-fig">
+          <span class="num">1,776</span>
+          <span class="what">Ontarians waiting for an organ transplant</span>
+          <span class="when">As of Oct. 18, 2026 · Trillium Gift of Life Network (2026)</span>
+          <span class="death">One Ontarian dies waiting every three days.</span>
+          <p class="context">Today, families are asked to reaffirm a registered donor’s decision at one of the hardest moments of their lives. Our proposal takes that weight off them.</p>
+        </div>
+
+        <div class="charts">
+          <figure class="chart">
+            <figcaption><b>Support for donation and registration</b><span class="source">Per cent of Ontarians · Trillium Gift of Life Network (2026)</span></figcaption>
+            <div class="bar-row">
+              <span class="bar-label">Support organ donation</span>
+              <span class="bar-track"><span class="bar" style="--v:90%"></span></span>
+              <span class="bar-val">9 in 10</span>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Registered donors</span>
+              <span class="bar-track"><span class="bar low" style="--v:34%"></span></span>
+              <span class="bar-val">34 per cent</span>
+            </div>
+            <div class="bar-row" aria-hidden="true">
+              <span class="spacer"></span>
+              <span class="axis"><span style="left:0">0</span><span style="left:50%">50</span><span style="left:100%">100</span></span>
+              <span class="spacer"></span>
+            </div>
+          </figure>
+
+          <figure class="chart">
+            <figcaption><b>Donor registration by community</b><span class="source">Registration rate, per cent · Trillium Gift of Life Network (2026)</span></figcaption>
+            <div class="bar-row">
+              <span class="bar-label">Bracebridge</span>
+              <span class="bar-track"><span class="bar" style="--v:59%"></span></span>
+              <span class="bar-val">59 per cent</span>
+            </div>
+            <div class="bar-row">
+              <span class="bar-label">Brampton</span>
+              <span class="bar-track"><span class="bar low" style="--v:14%"></span></span>
+              <span class="bar-val">14 per cent</span>
+            </div>
+            <div class="bar-row" aria-hidden="true">
+              <span class="spacer"></span>
+              <span class="axis"><span style="left:0">0</span><span style="left:50%">50</span><span style="left:100%">100</span></span>
+              <span class="spacer"></span>
+            </div>
+          </figure>
+
+          <figure class="chart families">
+            <div class="people" role="img" aria-label="Five figures, one highlighted: about 1 in 5">
+              <svg viewBox="0 0 24 32" aria-hidden="true"><circle cx="12" cy="7" r="5.5" fill="currentColor"/><path d="M2 31c0-8 4.5-13 10-13s10 5 10 13z" fill="currentColor"/></svg>
+              <svg viewBox="0 0 24 32" aria-hidden="true"><circle cx="12" cy="7" r="5.5" fill="currentColor"/><path d="M2 31c0-8 4.5-13 10-13s10 5 10 13z" fill="currentColor"/></svg>
+              <svg viewBox="0 0 24 32" aria-hidden="true"><circle cx="12" cy="7" r="5.5" fill="currentColor"/><path d="M2 31c0-8 4.5-13 10-13s10 5 10 13z" fill="currentColor"/></svg>
+              <svg viewBox="0 0 24 32" aria-hidden="true"><circle cx="12" cy="7" r="5.5" fill="currentColor"/><path d="M2 31c0-8 4.5-13 10-13s10 5 10 13z" fill="currentColor"/></svg>
+              <svg class="no" viewBox="0 0 24 32" aria-hidden="true"><circle cx="12" cy="7" r="5.5" fill="currentColor"/><path d="M2 31c0-8 4.5-13 10-13s10 5 10 13z" fill="currentColor"/></svg>
+            </div>
+            <span class="big">About 1 in 5</span>
+            <p>families of registered donors said no to donation, according to 2015 data. <span class="source">CBC News (2016)</span></p>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="ask">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Our Ask</p>
+        <h2>Opt-out donation for Ontarians 16 and older, with no family veto.</h2>
+        <p class="lede">Ontario would treat every eligible adult and teen 16 and older as a donor unless they opt out, and their decision would stand.</p>
+      </div>
+      <ul class="asks">
+        <li class="core"><span class="tag">Deemed consent</span><h3>Opt-out for everyone 16 and older</h3><p>Every eligible Ontarian aged 16 and older is considered a donor unless they choose to opt out.</p></li>
+        <li class="core"><span class="tag">Final decision</span><h3>No family veto</h3><p>A registered or deemed decision to donate cannot be overridden by family members.</p></li>
+        <li><span class="tag">Your choice</span><h3>Opt out any time</h3><p>Change your decision whenever you want, online or in person at ServiceOntario.</p></li>
+        <li><span class="tag">Safeguards</span><h3>Clear exemptions</h3><p>People under 16, people without the capacity to decide, and people who have lived in Ontario for less than 12 months are not deemed donors.</p></li>
+        <li><span class="tag">Before it starts</span><h3>An 18-month education period</h3><p>The law takes effect after 18 months of public education, so every Ontarian knows how to register or opt out.</p></li>
+        <li><span class="tag">Capacity</span><h3>Funding for the donation system</h3><p>Hospitals and donation teams get the funding they need to support more donations.</p></li>
+      </ul>
+      <div class="assurance">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.4-7 10-4-1.6-7-5.5-7-10V6z" fill="none"/><path d="M8.8 12.2l2.2 2.2 4.4-4.6" fill="none"/></svg>
+        <p>Nobody is required to donate. Saying no stays as simple as saying yes, and you can change your decision at any time.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="stories">
+    <div class="wrap">
+      <div class="film">
+        <div class="film-media">
+          <video id="film" controls playsinline preload="metadata" poster="media/poster.jpg" aria-describedby="film-label">
+            <source src="media/a-decision-made-at-16.mp4" type="video/mp4">
+            Your browser can’t play this video. Read the transcript beside it instead.
+          </video>
+          <p class="film-label" id="film-label">Dramatization. Characters are fictional.</p>
+        </div>
+        <div class="film-copy">
+          <p class="eyebrow">Stories</p>
+          <h2>A Decision Made at 16</h2>
+          <p class="meta">Animated dramatization · 1:22 · Voice-over with on-screen captions</p>
+          <p>Sam registered as an organ donor at 16, the day he got his driver’s licence. Eleven years later, his family was asked to make his decision again. Across the city, someone on dialysis was waiting for a phone call.</p>
+          <details class="transcript">
+            <summary>Read the transcript</summary>
+            <ol>
+              <li><b>Sam’s sister</b>My brother Sam got his first driver’s licence at 16. That same day, he registered as an organ donor.</li>
+              <li><b>Sam’s sister</b>He told all of us. He was proud of it.</li>
+              <li><b>Sam’s sister</b>Eleven years later, after a sudden brain injury, we sat in a hospital waiting room.</li>
+              <li><b>Sam’s sister</b>He had already decided. But we were asked to decide again. We argued for hours.</li>
+              <li><b>Transplant recipient</b>Across the city, I was on dialysis. Three times a week, four hours at a time.</li>
+              <li><b>Transplant recipient</b>Then, one night, my phone rang.</li>
+              <li><b>Transplant recipient</b>I’ll never know my donor’s name. So I wrote a letter to say thank you.</li>
+              <li><b>Sam’s sister</b>Right now, 1,776 Ontarians are waiting for a transplant. One dies every three days.</li>
+              <li><b>Transplant recipient</b>Nine in 10 of us support donation. Only 34 per cent are registered.</li>
+              <li><b>Sam’s sister</b>In Ontario, a registered yes still isn’t final. His decision should have been. Yours should be too.</li>
+              <li><b>Transplant recipient</b>Sign the petition.</li>
+            </ol>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="petition">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Petition</p>
+        <h2>Paper signatures are the ones that count.</h2>
+        <p class="lede">The Legislative Assembly of Ontario accepts paper petitions with original, handwritten signatures. Our goal is 10,000.</p>
+      </div>
+
+      <div class="pet-grid">
+        <ol class="steps">
+          <li><h3>Print the petition</h3><p>It’s one letter-size page with 12 signature lines. The petition text sits at the top of every page, as the Assembly requires. <a href="media/petition.pdf" target="_blank" rel="noopener">Download the petition (PDF)</a></p></li>
+          <li><h3>Collect original signatures</h3><p>Each signer prints their name and address and signs by hand. Signers must live in Ontario and can be under 18. Photocopies and online signatures don’t count.</p></li>
+          <li><h3>Return your pages</h3><p>Bring completed pages to a signing table. A sponsoring MPP presents them at Queen’s Park.</p></li>
+        </ol>
+
+        <div class="print-block" id="print">
+          <div class="sheet" id="sheet" aria-label="Preview of the paper petition">
+            <span class="s-title">Petition</span>
+            <span class="s-to">To the Legislative Assembly of Ontario:</span>
+            <p class="s-w"><b>WHEREAS</b> 1,776 Ontarians were waiting for an organ transplant as of Oct. 18, 2026, and one Ontarian dies every three days while waiting;</p>
+            <p class="s-w"><b>WHEREAS</b> nine in 10 Ontarians support organ donation, but only 34 per cent are registered donors;</p>
+            <p class="s-w"><b>WHEREAS</b> families in Ontario are asked to reaffirm a registered donor’s decision, and a registered decision to donate can still go unfulfilled when a family says no;</p>
+            <p class="s-w"><b>WHEREAS</b> Ontarians can register their decision to donate from the age of 16;</p>
+            <p class="s-prayer">We, the undersigned, petition the Legislative Assembly of Ontario to pass legislation establishing an opt-out system of organ and tissue donation for Ontarians aged 16 and older, under which a person’s registered or deemed decision to donate cannot be overridden by family members.</p>
+            <div class="s-rows" aria-hidden="true">
+              <span class="h"></span><span class="h">Name (print)</span><span class="h">Address</span><span class="h">Signature</span>
+              <span class="n">1</span><span></span><span></span><span></span>
+              <span class="n">2</span><span></span><span></span><span></span>
+              <span class="n">3</span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="print-actions">
+            <a class="btn primary" href="media/petition.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="M7.5 10.5L12 15l4.5-4.5"/><path d="M5 20h14"/></svg>
+              Open the printable PDF
+            </a>
+            <button class="btn" type="button" id="copy-btn">Copy petition text</button>
+          </div>
+          <p class="status" id="copy-status" aria-live="polite"></p>
+          <p class="fine">Printed copies are also available at every signing table. Petitions become public documents, including each signer’s name and address.</p>
+        </div>
+      </div>
+
+      <div class="act-grid">
+        <section class="pledge" id="pledge" aria-labelledby="pledge-title">
+          <h3 id="pledge-title">Pledge your support</h3>
+          <p class="fine">A pledge shows you’re with us. It is not a petition signature.</p>
+          <form id="pledge-form" novalidate>
+            <label class="check"><input type="checkbox" id="pl-support"> <span>I support opt-out organ and tissue donation for Ontarians 16 and older, with no family veto.</span></label>
+            <label class="check"><input type="checkbox" id="pl-sign"> <span>I’ll sign a paper petition at a signing table.</span></label>
+            <label class="check"><input type="checkbox" id="pl-talk"> <span>I’ll tell my family about my decision.</span></label>
+            <p class="error" id="pledge-error" hidden>Tick the first box to add your pledge.</p>
+            <button class="btn primary" type="submit">Add my pledge</button>
+            <p class="fine">This page doesn’t collect your name, email or any other personal information.</p>
+          </form>
+          <div class="done" id="pledge-done" tabindex="-1" hidden>
+            <p><strong>Thank you. Your pledge is saved on this device.</strong> To be counted at Queen’s Park, add your signature to a paper petition.</p>
+            <div class="row"><a href="#locations">Find a signing location</a><button class="linkish" type="button" id="pledge-undo">Undo my pledge</button></div>
+          </div>
+        </section>
+
+        <section class="locations" id="locations" aria-labelledby="loc-title">
+          <h3 id="loc-title">Find a signing location</h3>
+          <p class="fine">Signing tables open across the Greater Toronto Area after the launch. Dates and times will be posted here, with a map.</p>
+          <ul class="hubs">
+            <li><span class="hub-region">Peel Region</span><span class="chip priority">Priority area</span><span class="hub-cities">Brampton · Mississauga</span><p>Brampton’s donor registration rate is 14 per cent.</p></li>
+            <li><span class="hub-region">Toronto</span><span class="chip">Times coming soon</span><span class="hub-cities">Downtown · North York · Scarborough</span></li>
+            <li><span class="hub-region">York Region</span><span class="chip">Times coming soon</span><span class="hub-cities">Markham · Richmond Hill · Vaughan</span></li>
+            <li><span class="hub-region">Host a table</span><span class="chip">Open to all</span><span class="hub-cities">Schools · Workplaces · Places of worship · Community groups</span><p>Ask our team for a host kit with printed petitions and a sign-in sheet.</p></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="newsroom">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Newsroom</p>
+        <h2>For reporters and editors</h2>
+      </div>
+      <div class="news-grid">
+        <div class="news-col">
+          <h3>Media kit</h3>
+          <ul class="kit">
+            <li><b>News release</b><span>The campaign launch and the petition</span></li>
+            <li><b>Fact sheet</b><span>Waitlist, registration and family-refusal figures, with sources</span></li>
+            <li><b>Infographic</b><span>The numbers behind the campaign on one page</span></li>
+            <li><b>Spokesperson bios</b><span>Background on each speaker</span></li>
+            <li><b>Photos and B-roll</b><span>Stills and clips from <i>A Decision Made at 16</i></span></li>
+          </ul>
+          <p class="fine">Available at the media table and on request.</p>
+        </div>
+        <div class="news-col">
+          <h3>Spokespeople</h3>
+          <ul class="people-list">
+            <li><b>Juliana</b><span>Executive Director</span></li>
+            <li><b>Yuvan</b><span>Physician and bioethicist</span></li>
+            <li><b>Trang Phan</b><span>Transplant recipient</span></li>
+            <li><b>Wazhma</b><span>Donor family member</span></li>
+            <li><b>Lucas</b><span>Media Relations Lead and MC</span></li>
+          </ul>
+          <p class="fine">Team 4 members speak in assigned roles at the news conference.</p>
+        </div>
+        <div class="contact">
+          <p class="eyebrow">Media contact</p>
+          <b>Lucas</b>
+          <p>Media Relations Lead. For interviews and the media kit, find Lucas at the media table after the news conference.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <p class="disclaimer">Right to Second Life Ontario is a fictional organization created by Team 4 for a Seneca Polytechnic course assignment. Video content is an animated dramatization.</p>
+      <div>
+        <p class="eyebrow" style="margin-bottom:0.6rem">Sources</p>
+        <ul class="fine">
+          <li>Trillium Gift of Life Network (2026): waitlist as of Oct. 18, 2026, deaths while waiting, support and registration rates.</li>
+          <li>CBC News (2016): families of registered donors who declined donation, 2015 data.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="fine">This page and the animated film were made with help from Claude, an AI model by Anthropic. <a href="#top">Back to top</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Signature counter: edit data-collected on the #tally element in this file to update the page.
+  var tally = document.getElementById("tally");
+  if (tally) {
+    var n = parseInt(tally.getAttribute("data-collected"), 10) || 0;
+    var goal = parseInt(tally.getAttribute("data-goal"), 10) || 10000;
+    var fmt = function (x) { return x.toLocaleString("en-CA"); };
+    var pct = Math.max(0, Math.min(100, (n / goal) * 100));
+    document.getElementById("tally-num").textContent = fmt(n);
+    document.getElementById("tally-goal").textContent = fmt(goal);
+    document.getElementById("tally-fill").style.width = pct + "%";
+    var track = document.getElementById("tally-track");
+    track.setAttribute("aria-valuenow", String(n));
+    track.setAttribute("aria-valuemax", String(goal));
+    track.setAttribute("aria-label", "Paper signatures collected: " + fmt(n) + " of " + fmt(goal));
+  }
+
+  var KEY = "rtslo-pledge";
+  var form = document.getElementById("pledge-form");
+  var done = document.getElementById("pledge-done");
+  var err = document.getElementById("pledge-error");
+  var support = document.getElementById("pl-support");
+
+  function show(pledged) { form.hidden = pledged; done.hidden = !pledged; }
+  try { if (localStorage.getItem(KEY)) show(true); } catch (e) {}
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!support.checked) { err.hidden = false; support.focus(); return; }
+    err.hidden = true;
+    try { localStorage.setItem(KEY, "1"); } catch (e2) {}
+    show(true);
+    done.focus();
+  });
+  support.addEventListener("change", function () { if (support.checked) err.hidden = true; });
+  document.getElementById("pledge-undo").addEventListener("click", function () {
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    form.reset(); show(false); support.focus();
+  });
+
+  var copyBtn = document.getElementById("copy-btn");
+  var status = document.getElementById("copy-status");
+  var sheet = document.getElementById("sheet");
+  function petitionText() {
+    var parts = [];
+    sheet.querySelectorAll(".s-title, .s-to, .s-w, .s-prayer").forEach(function (el) { parts.push(el.textContent.trim()); });
+    return parts.join("\n\n");
+  }
+  function selectFallback() {
+    var r = document.createRange();
+    r.setStartBefore(sheet.querySelector(".s-title"));
+    r.setEndAfter(sheet.querySelector(".s-prayer"));
+    var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+    status.textContent = "Petition text selected. Press Ctrl+C (or Cmd+C) to copy.";
+  }
+  copyBtn.addEventListener("click", function () {
+    var text = petitionText();
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { status.textContent = "Petition text copied."; }, selectFallback);
+    } else { selectFallback(); }
+  });
+})();
+</script>
+</body>
+</html>
