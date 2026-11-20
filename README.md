@@ -2,7 +2,7 @@
 
 Landing page for **Right to Second Life Ontario**, a fictional organization created by Team 4 for a Seneca Polytechnic course assignment. The campaign calls for opt-out organ and tissue donation in Ontario for everyone 16 and older, with no family veto.
 
-Live site: https://trangphan0301.github.io/right-to-second-life-ontario/
+Live site: https://righttosecondlife.netlify.app/ (mirror: https://trangphan0301.github.io/right-to-second-life-ontario/)
 
 ## What's on the page
 
